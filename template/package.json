@@ -10,7 +10,7 @@
     "watch": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js",
     "build": "cross-env NODE_PATH=src NODE_ENV=prod browserify -e src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
     "lint": "eslint --ext .js,.vue src test/unit; exit 0",
-    "serve": "http-server -c 1 -a localhost",
+    "serve": "http-server -c 1 -a localhost -o",
     "test": "cross-env NODE_PATH=src karma start karma.conf.js"
   },
   "browserify": {
